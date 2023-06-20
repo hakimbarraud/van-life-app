@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import { Suspense } from "react";
 import {
   Await,
   Link,
@@ -14,12 +14,11 @@ export function loader() {
 
 const Vans = () => {
   const vansPromise = useLoaderData();
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const typeFilter = searchParams.get("type");
-  console.log(typeFilter);
 
   return (
-    <div className="px-4">
+    <div className="px-4 max-w-xl mx-auto">
       <h1 className="text-center font-extrabold text-3xl mb-6">
         Explore our van options
       </h1>
@@ -74,9 +73,11 @@ const Vans = () => {
                   >
                     Luxury
                   </Link>
-                  <Link to="" className="underline hover:opacity-50">
-                    Clear filter
-                  </Link>
+                  {typeFilter && (
+                    <Link to="" className="underline hover:opacity-50">
+                      Clear filter
+                    </Link>
+                  )}
                 </div>
                 <div className="grid grid-cols-2 gap-4">{displayedVans}</div>
               </>

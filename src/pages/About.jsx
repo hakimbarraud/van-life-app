@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const About = () => {
   return (
-    <>
+    <div className="max-w-xl mx-auto">
       <header className="bg-[url('images/bg-about.png')] h-44 bg-no-repeat bg-cover bg-center"></header>
       <div className="px-4">
         <h2 className="font-bold text-3xl my-6">
@@ -31,7 +30,7 @@ const About = () => {
           Explore our vans
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

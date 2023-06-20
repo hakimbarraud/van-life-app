@@ -1,4 +1,3 @@
-import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -9,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="flex justify-between items-center p-4">
+    <header className="flex justify-between items-center p-4 max-w-xl mx-auto">
       <Link
         to="/"
         className="font-bold text-2xl hover:font-bold hover:underline"

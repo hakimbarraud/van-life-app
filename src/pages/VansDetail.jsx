@@ -1,5 +1,5 @@
-import React, { Suspense } from "react";
-import { Await, Link, defer, useLoaderData, useParams } from "react-router-dom";
+import { Suspense } from "react";
+import { Await, Link, defer, useLoaderData } from "react-router-dom";
 import { getVans } from "../utils/api";
 
 export function loader({ params }) {
@@ -9,13 +9,19 @@ export function loader({ params }) {
 const VansDetail = () => {
   const vanPromise = useLoaderData();
   return (
-    <div className="px-4">
+    <div className="px-4 max-w-xl mx-auto">
       <Suspense fallback={<h2 className="text-center">Loading vans...</h2>}>
         <Await resolve={vanPromise.van}>
           {(van) => {
             return (
               <>
-                <Link to="../" relative="path" className="hover:text-orange-400 mb-4 inline-block">&larr; Back</Link>
+                <Link
+                  to="../"
+                  relative="path"
+                  className="hover:text-orange-400 mb-4 inline-block"
+                >
+                  &larr; Back
+                </Link>
                 <img src={van.imageUrl} alt={van.name} className="rounded-lg" />
                 <p className="bg-orange-400 text-white px-4 py-1 rounded font-semibold inline-block my-4">
                   {van.type}

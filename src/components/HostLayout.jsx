@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
 
 const HostLayout = () => {
@@ -8,7 +7,7 @@ const HostLayout = () => {
     color: "#161616",
   };
   return (
-    <>
+    <div className="max-w-xl mx-auto">
       <nav>
         <NavLink
           to="."
@@ -41,7 +40,7 @@ const HostLayout = () => {
         </NavLink>
       </nav>
       <Outlet />
-    </>
+    </div>
   );
 };
 

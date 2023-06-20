@@ -1,9 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <header className="bg-[url('images/bg-home.png')] bg-center bg-no-repeat bg-cover h-96 text-white flex flex-col justify-center">
+    <header className="bg-[url('images/bg-home.png')] bg-center bg-no-repeat bg-cover h-96 text-white flex flex-col justify-center max-w-xl mx-auto rounded-lg">
       <div className="px-4">
         <h1 className="text-3xl font-bold">
           You got the travel plans, we got the travel vans.
