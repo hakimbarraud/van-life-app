@@ -1,7 +1,11 @@
-import React from "react";
+import income from "../images/income.png";
 
 const Income = () => {
-  return <div className="p-4 text-2xl font-bold">Income goes here</div>;
+  return (
+    <div className="py-4">
+      <img src={income} />
+    </div>
+  );
 };
 
 export default Income;
